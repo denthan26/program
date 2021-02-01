@@ -1,0 +1,4 @@
+D:\vs_work\study\text_1_29\Debug\text_1_29.exe
+D:\vs_work\study\text_1_29\Debug\text_1_29.pdb
+D:\vs_work\study\text_1_29_guess game\Debug\text_1_29.exe
+D:\vs_work\study\text_1_29_guess game\Debug\text_1_29.pdb
