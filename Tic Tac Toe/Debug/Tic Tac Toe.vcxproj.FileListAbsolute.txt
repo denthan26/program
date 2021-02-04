@@ -1,0 +1,2 @@
+D:\vs_work\study\Tic Tac Toe\Debug\Tic Tac Toe.exe
+D:\vs_work\study\Tic Tac Toe\Debug\Tic Tac Toe.pdb
