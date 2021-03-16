@@ -7,21 +7,21 @@ void setWindowsStyle();
 
 void setWindowsStyle()
 {
-	//标题 颜色 长宽
-	system("title 用户输入");
+	//鏍囬 棰滆壊 闀垮
+	system("title 鐢ㄦ埛杈撳叆");
 	system("color f0");
 	system("mode con cols=30 lines=8");
 }
 int main()
 {
-	setWindowsStyle();//界面格式
+	setWindowsStyle();//鐣岄潰鏍煎紡
 	while (1)
 	{
 		printf("\n");
 		printf("\n");
 		printf("\n");
-		printf("（＞人＜；）");
-		printf("\t徐以亮是帅比");
+		printf("锛堬紴浜猴紲锛涳級");
+		printf("\t寰愪互浜槸甯呮瘮");
 		printf("\n");
 		Sleep(1000);
 		system("cls");
