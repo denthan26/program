@@ -1,0 +1,138 @@
+//冒泡排序  二分查找
+#include <stdio.h>
+int binarySearch(int arr[10], int sz);
+void sort(int arr[10], int sz);
+void sort_1();
+
+//冒泡排序
+void sort(int arr[10], int sz)
+{
+	int n = 0;
+	int i = 0;
+	int temp = 0;
+	for (i = 0; i < sz - 1; i++)
+	{
+		for (n = 0; n < sz - 1 - i; n++)
+		{
+			
+			if (arr[n] > arr[n + 1]);
+			{
+				temp = arr[n];
+				arr[n] = arr[n + 1];
+				arr[n + 1] = temp;
+			}
+		}
+
+	}
+	for (i = 0; i < 10; i++)
+		printf("%d ", arr[i]);
+}
+
+void sort_1()
+{
+
+	
+		int a[] = { 900, 2, 3, -58, 34, 76, 32, 43, 56, -70, 35, -234, 532, 543, 2500 };
+		int n;  //存放数组a中元素的个数
+		int i;  //比较的轮数
+		int j;  //每轮比较的次数
+		int buf;  //交换数据时用于存放中间数据
+		n = sizeof(a) / sizeof(a[0]);  /*a[0]是int型, 占4字节, 所以总的字节数除以4等于元素的个数*/
+		for (i = 0; i < n - 1; ++i)  //比较n-1轮
+		{
+			for (j = 0; j < n - 1 - i; ++j)  //每轮比较n-1-i次,
+			{
+				if (a[j] < a[j + 1])
+				{
+					buf = a[j];
+					a[j] = a[j + 1];
+					a[j + 1] = buf;
+				}
+			}
+		}
+		for (i = 0; i < n; ++i)
+		{
+			printf("%d\x20", a[i]);
+		}
+		printf("\n");
+		return 0;
+	
+}
+
+
+//二分查找
+int binarySearch(int arr[10], int sz)
+{
+	int left = 0;
+	int right = sz - 1;
+	int n = sz;
+	while (left <= right)
+	{
+		int mid = (left + right) / 2;
+		if (arr[mid] == 42)
+		{
+			//printf("42的下标是%d\n", mid);
+			return mid;
+			break;
+		}
+		else if (arr[mid] > 42)
+		{
+			right = mid;
+			//continue;
+		}
+		else
+		{
+			left = mid;
+			//continue;
+		}
+	}
+	return n + 1;
+
+}
+
+int main()
+{
+	int arr[10] = { 20,11,52,23,42,5,6,7,8,9 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	//int i = 0;
+	//sort(arr, sz);
+	//ort_1();
+	int n = 0;
+	int i = 0;
+	int ret = 0;
+	int temp = 0;
+	for (i = 0; i < sz - 1; i++)
+	{
+		for (n = 0; n < sz - 1 - i; n++)
+		//for(n=0;n<1;n++)
+		{
+
+			if (arr[n] > arr[n + 1])
+			{
+				temp = arr[n];
+				arr[n] = arr[n + 1];
+				arr[n + 1] = temp;
+				/*for (i = 0; i < 10; i++)
+					printf("%d ", arr[i]);
+				printf("\n");*/
+			}
+			/*else
+			{
+				printf("hehe\n");
+			}*/
+				
+		}
+
+	}
+	for (i = 0; i < 10; i++)
+		printf("%d ", arr[i]);
+	printf("\n");
+	//二分查找
+	//找到42的下标
+	ret = binarySearch(arr,sz);
+	if (ret >= 0 && ret <= 9)
+		printf("42的下标是%d\n", ret);
+	else
+		printf("您要找的值不在范围内");
+	return 0;
+}
